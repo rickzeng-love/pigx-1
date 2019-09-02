@@ -29,9 +29,6 @@ import com.pig4cloud.pigx.common.core.util.R;
 import com.pig4cloud.pigx.common.log.annotation.SysLog;
 import com.pig4cloud.pigx.common.security.annotation.Inner;
 import com.pig4cloud.pigx.common.security.util.SecurityUtils;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -45,7 +42,6 @@ import javax.validation.Valid;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/user")
-@Api(value = "user", tags = "用户管理模块")
 public class UserController {
 	private final SysUserService userService;
 
@@ -115,8 +111,6 @@ public class UserController {
 	@SysLog("删除用户信息")
 	@DeleteMapping("/{id}")
 	@PreAuthorize("@pms.hasPermission('sys_user_del')")
-	@ApiOperation(value = "删除用户", notes = "根据ID删除用户")
-	@ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "int", paramType = "path")
 	public R userDel(@PathVariable Integer id) {
 		SysUser sysUser = userService.getById(id);
 		return new R<>(userService.deleteUserById(sysUser));

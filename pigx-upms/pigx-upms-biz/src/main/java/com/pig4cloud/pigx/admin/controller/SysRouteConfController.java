@@ -21,7 +21,6 @@ import cn.hutool.json.JSONArray;
 import com.pig4cloud.pigx.admin.service.SysRouteConfService;
 import com.pig4cloud.pigx.common.core.util.R;
 import com.pig4cloud.pigx.common.log.annotation.SysLog;
-import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,7 +34,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/route")
-@Api(value = "route",tags = "动态路由管理模块")
 public class SysRouteConfController {
 	private final SysRouteConfService sysRouteConfService;
 

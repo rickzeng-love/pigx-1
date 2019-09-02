@@ -24,7 +24,6 @@ import com.pig4cloud.pigx.admin.service.SysSocialDetailsService;
 import com.pig4cloud.pigx.common.core.util.R;
 import com.pig4cloud.pigx.common.log.annotation.SysLog;
 import com.pig4cloud.pigx.common.security.annotation.Inner;
-import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -41,7 +40,6 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/social")
 @AllArgsConstructor
-@Api(value = "social", tags = "三方账号管理模块")
 public class SysSocialDetailsController {
 	private final SysSocialDetailsService sysSocialDetailsService;
 

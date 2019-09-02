@@ -26,4 +26,4 @@ spring:
 # Logger Config
 logging:
   level:
-    com.pig4cloud.pigx.demo.mapper: debug
+    com.pig4cloud.pigx.farm.mapper: debug
